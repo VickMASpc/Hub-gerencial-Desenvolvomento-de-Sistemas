@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hub de Projetos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Hub de Projetos</h1>
+    <p>
+      Documentação visual dos sistemas desenvolvidos até o momento,
+      suas especificidades, estados de desenvolvimento, guias e algumas notas
+    </p>
+    <div style="margin-top: 20px;">
+      <a
+        class="button"
+        href="https://github.com/VickMASpc/Hub-gerencial-Desenvolvomento-de-Sistemas"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ver página do projeto
+      </a>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#visao-geral">Visão geral</a>
+      <a href="#pontos">Sistema de pontos</a>
+      <a href="#ecommerce-logistica-vendas">E-commerce, logística e vendas</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="visao-geral">
+      <div class="card">
+        <h2 class="section-title">Visão geral</h2>
+        <p class="notice">
+          A proposta do projeto é desenvolver tanto sistemas externos da empresa,
+          como e-commerce e site empresarial, quanto um ecossistema interno com
+          sistemas de logística, vendas, ponto etc.
+        </p>
+
+        <div class="grid" style="margin-top: 22px;">
+          <div class="card project-card">
+            <span class="tag beta">Beta funcional</span>
+            <h3>Sistema de pontos</h3>
+            <p>
+              Sistema simples para registro de presença de funcionários, com
+              departamentos, cargos, funcionários e registros de ponto.
+            </p>
+            <a class="button" href="#pontos">Ver página do projeto</a>
+          </div>
+
+          <div class="card project-card">
+            <span class="tag beta">Beta funcional / integração</span>
+            <h3>E-commerce, logística e vendas</h3>
+            <p>
+              Conjunto de sistemas conectados para venda online, gestão de estoque,
+              pedidos e futura análise de vendas.
+            </p>
+            <a class="button" href="#ecommerce-logistica-vendas">Ver página do projeto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pontos">
+      <div class="card">
+        <h2 class="section-title">Projeto 1 — Sistema de pontos</h2>
+
+        <span class="tag beta">Beta funcional</span>
+
+        <p>
+          Sistema simples para registro de presença de funcionários. Permite que
+          administradores criem departamentos, cargos e funcionários, enquanto os
+          funcionários podem bater ponto e consultar suas informações e entradas
+          registradas.
+        </p>
+
+        <h3 style="margin-top: 22px;">Funcionalidades principais</h3>
+        <ul>
+          <li>Cadastro de departamentos.</li>
+          <li>Cadastro de cargos.</li>
+          <li>Cadastro e gerenciamento de funcionários.</li>
+          <li>Registro de entrada e saída de ponto.</li>
+          <li>Consulta de informações pessoais do funcionário.</li>
+          <li>Consulta de entradas registradas.</li>
+        </ul>
+
+        <div class="action-highlight">
+          <h3 style="margin-top: 0;">Ação necessária</h3>
+          <span class="tag action">Refatoração necessária</span>
+          <ul>
+            <li>
+              O sistema deve ser refatorado seguindo a questão dos QR codes discutida
+              no GitHub.
+            </li>
+          </ul>
+        </div>
+
+        <div class="button-row">
+          <a
+            class="button"
+            href="https://github.com/VickMASpc/Pontos"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Repositório do projeto
+          </a>
+
+          <a
+            class="button secondary"
+            href="https://github.com/VickMASpc/Pontos/discussions/3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Discussão sobre QR codes
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecommerce-logistica-vendas">
+      <div class="card">
+        <h2 class="section-title">Projeto 2 — E-commerce, logística e vendas</h2>
+
+        <span class="tag beta">Beta funcional / ecossistema integrado</span>
+
+        <p>
+          Projeto composto por sistemas conectados para operação comercial:
+          website de vendas, sistema de logística e sistema de análise de vendas
+          em estágio inicial.
+        </p>
+
+        <div class="grid" style="margin-top: 22px;">
+          <div class="card project-card">
+            <span class="tag integration">Sistema integrado</span>
+            <h3>Website de vendas</h3>
+            <p>
+              Website de e-commerce com listagem de produtos, carrinho funcional
+              e checkout conectado ao sistema local.
+            </p>
+
+            <h4>Itens especificados</h4>
+            <ul>
+              <li>Listagem de produtos.</li>
+              <li>Carrinho funcional.</li>
+              <li>Checkout conectado ao sistema local.</li>
+              <li>
+                Atualização automática dos produtos cadastrados no sistema.
+              </li>
+            </ul>
+          </div>
+
+          <div class="card project-card">
+            <span class="tag integration">Sistema interno</span>
+            <h3>Sistema de logística</h3>
+            <p>
+              Sistema de gestão de estoque voltado ao controle de produtos,
+              pedidos recebidos e envio.
+            </p>
+
+            <h4>Itens especificados</h4>
+            <ul>
+              <li>Cadastrar produtos.</li>
+              <li>Remover produtos.</li>
+              <li>Editar quantidades em estoque.</li>
+              <li>Acompanhar produtos com baixo estoque.</li>
+              <li>Integrar dados com pedidos recebidos pelo e-commerce.</li>
+              <li>Dar baixa nos produtos para envio dos pedidos.</li>
+            </ul>
+          </div>
+
+          <div class="card project-card">
+            <span class="tag alpha">Alpha</span>
+            <h3>Sistema de análise de vendas</h3>
+            <p>
+              Sistema em desenvolvimento para que a equipe de vendas possa ter
+              tracking de vendas e insights.
+            </p>
+
+            <h4>Itens especificados</h4>
+            <ul>
+              <li>Acompanhamento de vendas.</li>
+              <li>Geração de insights para a equipe comercial.</li>
+              <li>Base inicial para futuras métricas, relatórios e dashboards.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <a
+            class="button"
+            href="https://github.com/VickMASpc/Projeto-E-commerce--website-e-vendas-/tree/Testes-Firestore"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Repositório do projeto
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Hub de Projetos — documentação inicial dos sistemas e direcionamento técnico.
+  </footer>
+</body>
+</html>
