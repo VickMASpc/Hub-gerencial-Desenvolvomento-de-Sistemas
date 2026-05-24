@@ -46,11 +46,11 @@
 
         <div class="grid" style="margin-top: 22px;">
           <div class="card project-card">
-            <span class="tag beta">Beta funcional</span>
+            <span class="tag integration">MVP QR funcional</span>
             <h3>Sistema de pontos</h3>
             <p>
-              Sistema simples para registro de presença de funcionários, com
-              departamentos, cargos, funcionários e registros de ponto.
+              Sistema de presença por QR Code, com geração de crachás,
+              scanner por câmera para gestores e painel administrativo.
             </p>
             <a class="button" href="#pontos">Ver página do projeto</a>
           </div>
@@ -70,55 +70,73 @@
 
     <section id="pontos">
       <div class="card">
-        <h2 class="section-title">Projeto 1 — Sistema de pontos</h2>
+        <h2 class="section-title">Projeto 1 — Sistema de Controle de Ponto por QR Code</h2>
 
-        <span class="tag beta">Beta funcional</span>
+        <span class="tag integration">MVP QR funcional</span>
 
         <p>
-          Sistema simples para registro de presença de funcionários. Permite que
-          administradores criem departamentos, cargos e funcionários, enquanto os
-          funcionários podem bater ponto e consultar suas informações e entradas
-          registradas.
+          Sistema de presença por QR Code para ambientes escolares. Administradores
+          gerenciam departamentos, cargos, funcionários e gestores; gestores registram
+          entradas e saídas ao escanear os crachás pela câmera do dispositivo; e
+          funcionários consultam seu próprio histórico.
         </p>
 
         <h3 style="margin-top: 22px;">Funcionalidades principais</h3>
         <ul>
-          <li>Cadastro de departamentos.</li>
-          <li>Cadastro de cargos.</li>
-          <li>Cadastro e gerenciamento de funcionários.</li>
-          <li>Registro de entrada e saída de ponto.</li>
-          <li>Consulta de informações pessoais do funcionário.</li>
-          <li>Consulta de entradas registradas.</li>
+          <li>Painel administrativo para departamentos, cargos, funcionários e gestores.</li>
+          <li>Geração automática de QR Code único e impressão de crachá.</li>
+          <li>Scanner de QR Code via câmera do navegador para o gestor do departamento.</li>
+          <li>Confirmação de entrada ou saída após a leitura do crachá.</li>
+          <li>Visualização de presentes do dia e scans recentes para gestores.</li>
+          <li>Consulta de histórico de ponto pelo funcionário.</li>
+          <li>Registro do método <code>camera-qr</code> para rastreabilidade da presença.</li>
         </ul>
 
-        <div class="action-highlight">
-          <h3 style="margin-top: 0;">Ação necessária</h3>
-          <span class="tag action">Refatoração necessária</span>
+        <h3 style="margin-top: 22px;">Papéis de acesso</h3>
+        <ul>
+          <li><strong>Admin:</strong> gestão completa e visualização dos registros.</li>
+          <li><strong>Gestor:</strong> scanner QR e acompanhamento do próprio departamento.</li>
+          <li><strong>Funcionário:</strong> registro próprio e consulta de histórico.</li>
+          <li><strong>TI:</strong> criação de administradores por código de acesso.</li>
+        </ul>
+
+        <div class="implementation-highlight">
+          <h3 style="margin-top: 0;">Implementação QR disponibilizada</h3>
+          <span class="tag integration">Branch principal informada</span>
           <ul>
-            <li>
-              O sistema deve ser refatorado seguindo a questão dos QR codes discutida
-              no GitHub.
-            </li>
+            <li>Leitura de QR Code usando câmera nativa no navegador.</li>
+            <li>Geração de crachás QR diretamente na lista de funcionários.</li>
+            <li>Feedback visual para confirmação, câmera negada e QR incompatível.</li>
+            <li>Para produção, é necessário publicar as regras Firestore, habilitar login por e-mail/senha e criar o índice composto de presença.</li>
           </ul>
         </div>
 
         <div class="button-row">
           <a
             class="button"
-            href="https://github.com/VickMASpc/Pontos"
+            href="https://github.com/VickMASpc/Pontos/tree/codex/fix-qr-mvp-on-testes-qr-code-branch"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Repositório do projeto
+            Branch principal do projeto
           </a>
 
           <a
             class="button secondary"
-            href="https://github.com/VickMASpc/Pontos/discussions/3"
+            href="https://vickmaspc.github.io/Pontos/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Discussão sobre QR codes
+            Acessar demonstração
+          </a>
+
+          <a
+            class="button secondary"
+            href="https://github.com/VickMASpc/Pontos/blob/codex/fix-qr-mvp-on-testes-qr-code-branch/README.md"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Documentação do QR Code
           </a>
         </div>
       </div>
